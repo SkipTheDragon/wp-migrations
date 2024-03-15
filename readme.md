@@ -4,19 +4,20 @@ Heavily inspired by Symfony/Doctrine migrations, this package provides a simple 
 
 ### Installation
 
-1. Copy the folders in your plugin and change the namespaces if your app has autoloading.
-2. Search for @todo in the code and replace with your own values.
-3. Check `Usage` for more details.
+```bash
+ composer require skipthedragon/wp-migrations
+```
 
-### Dependencies
+### Pre-requisites
 
-As this package is meant to be used in a WordPress environment, it depends on the following packages:
+This package requires:
   - `wpdb` (WordPress database)
+  - at least PHP 8.1
 
 ### Prerequisites
 
 Migrations must:
-  - be in the migration folder that you specified in the config file (`service/MigrationManagerService.php`)
+  - be in the migration folder that you specified in the config
   - have a unique timestamp in its name
   - implement the Migration interface (`WpMigrations\Architecture\Migration`)
   - have `MigrationV` in its name
@@ -26,9 +27,15 @@ Migrations must:
 To run the migrations, you can use the following code:
 
 ```php
- use  WpMigrations\Service\MigrationManagerService;
+ use WpMigrations\service\MigrationManagerService;
  
- $migrationManagerService = new MigrationManagerService();
+ $config = new \WpMigrations\Architecture\MigrationConfig(
+        'path/to/migrations',
+        'WpMigrations\\Migrations\\',
+        'my_plugin_name'
+ );
+ 
+ $migrationManagerService = new MigrationManagerService($config);
  $migrationManagerService->migrate();
 ```
 

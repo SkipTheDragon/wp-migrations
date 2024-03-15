@@ -1,0 +1,29 @@
+{
+    "name": "skipthedragon/wp-migrations",
+    "description": "Doctrine like Migrations in WordPress.",
+    "type": "library",
+    "version": "0.1.0",
+    "license": "Apache-2.0 license",
+    "authors": [
+        {
+            "name": "Tudorache Leonard Valentin",
+            "email": "tudorache.leonard@wyverr.com"
+        }
+    ],
+    "require-dev": {
+        "php": ">=8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "WpMigrations\\": "src/",
+            "WpMigrations\\Repository\\": "src/repository/",
+            "WpMigrations\\Architecture\\": "src/architecture/",
+            "WpMigrations\\Service\\": "src/service/"
+        },
+        "files": [
+            "src/function/isTimestamp.php"
+        ]
+    },
+    "minimum-stability": "stable",
+    "require": {}
+}

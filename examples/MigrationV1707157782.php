@@ -1,9 +1,6 @@
 <?php
 
-namespace WpMigrations\Migration;
-
-use WpMigrations\Architecture\DBUtils;
-use WpMigrations\Architecture\Migration;
+use WpMigrations\architecture\Migration;
 
 /**
  * Migration example.
@@ -18,8 +15,6 @@ use WpMigrations\Architecture\Migration;
  * @since 1.0
  */
 class MigrationV1707157782 implements Migration {
-	use DBUtils;
-
 	public function up(): void {
 
 	}
