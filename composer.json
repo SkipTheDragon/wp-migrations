@@ -3,7 +3,7 @@
     "description": "Doctrine like Migrations in WordPress.",
     "type": "library",
     "version": "0.1.0",
-    "license": "Apache-2.0 license",
+    "license" : "Apache-2.0",
     "authors": [
         {
             "name": "Tudorache Leonard Valentin",
